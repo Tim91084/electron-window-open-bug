@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <style>
+      html, body { 
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <webview src="webview-test.html"
+      style="height:100%; width: 100%"
+      allowpopups
+      preload="preload.js"
+      webPreferences="contextIsolation=no,nativeWindowOpen=yes"></webview>
+    <script>
+      require('./renderer.js')
+    </script>
+  </body>
+</html>
